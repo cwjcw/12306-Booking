@@ -29,24 +29,24 @@ class Robot:
 
     def wait_ele_click_xpath_safe(self, xpath, timeout=5):
         WebDriverWait(self.driver, timeout).until(ec.visibility_of_element_located((By.XPATH, xpath)))
-        self.driver.find_element_by_xpath(xpath).click()
+        self.driver.find_element(By.XPATH, xpath).click()
 
     def wait_ele_xpath_safe(self, xpath, timeout=5):
         WebDriverWait(self.driver, timeout).until(ec.visibility_of_element_located((By.XPATH, xpath)))
-        if self.driver.find_element_by_xpath(xpath):
+        if self.driver.find_element(By.XPATH, xpath):
             return True
         else:
             return False
 
     def find_ele_click_xpath(self, xpath):
-        self.driver.find_element_by_xpath(xpath).click()
+        self.driver.find_element(By.XPATH, xpath).click()
 
     def send_keys_xpath(self, xpath, keys):
-        self.driver.find_element_by_xpath(xpath).clear()
-        self.driver.find_element_by_xpath(xpath).send_keys(keys)
+        self.driver.find_element(By.XPATH, xpath).clear()
+        self.driver.find_element(By.XPATH, xpath).send_keys(keys)
 
     def find_eles_xpath(self, xpath):
-        eles = self.driver.find_elements_by_xpath(xpath)
+        eles = self.driver.find_element(By.XPATH, xpath)
         if eles:
             return eles
         return False
@@ -57,10 +57,10 @@ class Robot:
         self.driver.switch_to.window(handle[-1])
 
     def get_ele_text(self, xpath):
-        return self.driver.find_element_by_xpath(xpath).text
+        return self.driver.find_element(By.XPATH, xpath).text
 
     def input_clear_xpath(self, xpath):
-        return self.driver.find_element_by_xpath(xpath).clear()
+        return self.driver.find_element(By.XPATH, xpath).clear()
 
     def switch_last_window(self):
         handle = self.driver.window_handles
@@ -71,7 +71,7 @@ class Robot:
 
     def find_ele_xpath(self, xpath):
         try:
-            ele = self.driver.find_element_by_xpath(xpath)
+            ele = self.driver.find_element(By.XPATH, xpath)
             return True
         except Exception:
             return False

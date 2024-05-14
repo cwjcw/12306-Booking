@@ -15,9 +15,9 @@ to_time: 到达时间
 config = {
             'travel_person': '崔玮杰',
             'seat': 'D',
-            'start_station': '厦门北站',
-            'to_station': '厦门站',
-            'travel_date': '2024-05-31',
-            'start_time': '17:40',
-            'to_time': '18:47'
+            'start_station': '厦门北',
+            'to_station': '北京丰台',
+            'travel_date': '2024-05-17',
+            'start_time': '07:44',
+            'to_time': '18:17'
         }

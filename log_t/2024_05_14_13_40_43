@@ -1,0 +1,20 @@
+2024-05-14 13:40:46.519 | INFO     | robot:log_t:28 - {'travel_person': '崔玮杰', 'seat': 'D', 'start_station': '厦门北', 'to_station': '北京丰台', 'travel_date': '2024-05-17', 'start_time': '07:44', 'to_time': '18:17'}
+2024-05-14 13:40:46.521 | INFO     | robot:log_t:28 - start logining
+2024-05-14 13:40:52.175 | INFO     | robot:log_t:28 - login success
+2024-05-14 13:40:52.178 | INFO     | robot:log_t:28 - start checking time
+2024-05-14 13:40:59.351 | ERROR    | __main__:<module>:8 - An error has been caught in function '<module>', process 'MainProcess' (28708), thread 'MainThread' (29756):
+Traceback (most recent call last):
+
+> File "g:\研究\Git\Github\12306-Booking\runner.py", line 8, in <module>
+    runner.check_time()
+    │      └ <function robot_12306.check_time at 0x00000148D0472950>
+    └ <robot_12306.robot_12306 object at 0x00000148CDAC56C0>
+
+  File "g:\研究\Git\Github\12306-Booking\robot_12306.py", line 53, in check_time
+    for row in rows:
+               └ <selenium.webdriver.remote.webelement.WebElement (session="57f7911ecdebf1cecabd851134da94b5", element="f.463CD8E2DFBD8218A2EC...
+
+TypeError: 'WebElement' object is not iterable
+2024-05-14 13:40:59.359 | INFO     | robot:log_t:28 - start booking
+2024-05-14 13:41:00.142 | INFO     | robot:log_t:28 - search success
+2024-05-14 13:41:01.321 | INFO     | robot:log_t:28 - 出发日时间不允许
