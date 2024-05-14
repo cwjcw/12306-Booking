@@ -1,0 +1,2 @@
+2024-05-14 13:25:11.044 | INFO     | robot:log_t:28 - {'travel_person': '崔玮杰', 'seat': 'D', 'start_station': '厦门北站', 'to_station': '厦门站', 'travel_date': '2024-05-31', 'start_time': '17:40', 'to_time': '18:47'}
+2024-05-14 13:25:11.047 | INFO     | robot:log_t:28 - start logining
